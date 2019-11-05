@@ -8,11 +8,11 @@ exports.up = function (knex) {
         table.string('model', 128).notNullable();
         table.integer('mileage', 64).notNullable();
         table.string('transmission', 128)
-        table.string('title staus', 128)
+        table.string('title_status', 128)
         table.timestamps();
     })
 };
 
 exports.down = function (knex) {
-    return knex.schema.dropTableIfExists(cars)
+    return knex.schema.dropTableIfExists('cars')
 };
